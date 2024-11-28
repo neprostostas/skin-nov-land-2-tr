@@ -1,0 +1,47 @@
+.header
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    z-index: 10
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: size(14.25) size(42) 0
+    +up-xxl
+        padding: size(26.25, $xxl) size(94.5, $xxl) 0
+    +md
+         padding: size(14.25, $md) size(42, $md) 0
+    +sm
+        padding: size(24, $sm) size(37, $sm) 0
+    .logo
+        width: size(141)
+        +up-xxl
+            width: size(198, $xxl)
+        +md
+            width: size(141, $md)
+        +sm
+            width: size(156, $sm)
+        img
+            width: 100%
+    .logo-2
+        width: size(80.25)
+        position: relative
+        +up-xxl
+            width: size(95.25, $xxl)
+        +md
+            width: size(80.25, $md)
+        +sm
+            width: size(93, $sm)
+            &::after
+                content: 'X'
+                text-align: center
+                width: size(63, $sm)
+                position: absolute
+                font-size: size(35, $sm)
+                line-height: size(42, $sm)
+                color: #fff
+                right: calc(100% + size(4, $sm))
+                top: size(26, $sm)
+        img
+            width: 100%

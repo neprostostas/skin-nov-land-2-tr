@@ -1,0 +1,621 @@
+// Comment out the following line (import normalize) if you are using Tailwind CSS (since it already has its own normalize built in)!
+// @import "./normalize"
+@use 'sass:math'
+@import "./vars"
+@import "./mixins"
+@import "./m-other"
+@import "./fonts"
+@import "./sprite_generated"
+@import "../libs/@splidejs/splide/dist/css/splide-core.min.css"
+// From libs:
+//@import "../libs/LIB_NAME/path/to/style.scss"
+  
+* 
+    box-sizing: border-box
+    // min-height: 0.001vw; // — Fixes Safari bug with viewport units in calc()
+.splide__list
+    will-change: transform
+body
+    font-family: "Inter", sans-serif
+    font-optical-sizing: auto
+    width: 100%
+    height: 100%
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    background-color: #141225
+    min-width: 320px
+    color: #fff
+.wrapper-bg
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    top: size(864)
+    +up-xxl
+        top: size(1249.5, $xxl)
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+.wrapper
+    position: relative
+    overflow: hidden
+    z-index: 2
+//TOP CONTENT
+.top-content
+    background-color: #000
+    padding: size(129) 0 size(99)
+    border-radius: 0 0 size(150) size(150)
+    +up-xxl
+        padding: size(159, $xxl) 0 size(92.64, $xxl)
+        border-radius: 0 0 size(150, $xxl) size(150, $xxl)
+    +md
+        padding: size(260, $lg) 0 size(120, $lg)
+        border-radius: 0 0 size(70, $lg) size(70, $lg)
+    +sm
+        padding: size(191, $sm) 0 size(58, $sm)
+        border-radius: 0 0 size(80, $sm) size(80, $sm)
+.top-content__hero-title
+    color: $green
+    font-weight: 900
+    font-style: italic
+    text-align: center
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    line-height: normal
+    max-width: size(871.5)
+    font-size: size(51.75)
+    +up-xxl
+        max-width: size(1017.75, $xxl)
+        font-size: size(63.75, $xxl)
+    +md
+        max-width: size(1017.75, $lg)
+        font-size: size(63.75, $lg)
+    +sm
+        max-width: 90%
+        font-size: size(42, $sm)
+.top-content__hero-desc
+    text-align: center
+    font-weight: 600
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    line-height: normal
+    max-width: size(657)
+    font-size: size(20.25)
+    margin-top: size(7.5)
+    +up-xxl
+        max-width: size(796.5, $xxl)
+        font-size: size(24.75, $xxl)
+        margin-top: size(20, $xxl)
+    +md
+        max-width: size(796.5, $lg)
+        font-size: size(24.75, $lg)
+        margin-top: size(20, $lg)
+    +sm
+        max-width: 84%
+        font-size: size(20, $sm)
+        margin-top: size(24, $sm)
+
+.top-content__hero__image
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: size(7.5)
+    width: size(1032.5)
+    img
+        width: 100%
+        display: block
+    +up-xxl
+        width: size(1187, $xxl)
+        margin-bottom: size(7.5, $xxl)
+    +md
+        width: size(1187, $lg)
+        margin-bottom: size(7.5, $lg)
+    +sm
+        width: size(335, $sm)
+        margin-bottom: size(38, $sm)
+        margin-top: size(44, $sm)
+        box-shadow: 0px 16px 64px 0px rgba(131, 245, 106, 0.26)
+        border-radius: size(15, $sm)
+
+.main-btn
+    background-image: url('../images/main-btn.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100% 100%
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all .2s ease-in-out
+    width: size(385.5)
+    height: size(73.5)
+    +up-xxl
+        width: size(478.5, $xxl)
+        height: size(91.23, $xxl)
+    +md
+        width: size(478.5, $lg)
+        height: size(91.23, $lg)
+    +sm
+        width: size(342, $sm)
+        height: size(67.68, $sm)
+    +hover
+        &:hover
+            filter: drop-shadow(0px 3px size(40) rgba(131, 245, 106, 0.44))
+    +touch
+        filter: drop-shadow(0px 3px size(40) rgba(131, 245, 106, 0.44))
+        +sm
+            filter: drop-shadow(0px 4px size(50, $sm) rgba(131, 245, 106, 0.44))
+.main-btn__text
+    font-weight: 700
+    color: #000
+    font-size: size(19.5)
+    +up-xxl
+        font-size: size(24, $xxl)
+    +md
+        font-size: size(24, $lg)
+    +sm
+        font-size: size(22, $sm)
+
+
+.top-content__bottom
+    margin-top: size(69)
+    +up-xxl
+        margin-top: size(115.77, $xxl)
+    +md
+        margin-top: size(115.77, $lg)
+    +sm
+        margin-top: size(80, $sm)
+.top-content__bottom__title
+    color: $green
+    font-weight: 900
+    font-style: italic
+    text-align: center
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    line-height: normal
+    font-size: size(41.25)
+    +up-xxl
+        font-size: size(56.25, $xxl)
+    +md
+        font-size: size(56.25, $lg)
+    +sm
+        font-size: size(37, $sm)
+        max-width: 90%
+.top-content__bottom__desc
+    text-align: center
+    font-weight: 600
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    line-height: normal
+    max-width: size(690)
+    font-size: size(20.25)
+    margin-top: size(7.5)
+    +up-xxl
+        max-width: size(843, $xxl)
+        font-size: size(24.25, $xxl)
+        margin-top: size(19.75, $xxl)
+    +md
+        max-width: size(843, $lg)
+        font-size: size(24.25, $lg)
+        margin-top: size(19.75, $lg)
+    +sm
+        max-width: 90%
+        font-size: size(20, $sm)
+        margin-top: size(10, $sm)
+.splide.step-slider
+    visibility: visible
+.splide__arrows
+    display: none
+    +sm
+        display: flex
+        justify-content: center
+        margin-top: size(39.58, $sm)
+        gap: size(7, $sm)
+.splide__arrow--prev
+    background-image: url('../images/slide-prev.svg')
+    background-repeat: no-repeat
+    background-position: center
+    text-indent: -9999px
+    width: size(48, $sm)
+    height: size(48, $sm)
+.splide__arrow--next
+    background-image: url('../images/slide-next.svg')
+    background-repeat: no-repeat
+    background-position: center
+    text-indent: -9999px
+    width: size(48, $sm)
+    height: size(48, $sm)
+.splide.step-slider.is-initialized:not(.is-active) .splide__list
+    display: flex
+.step-slider
+    +sm
+        width: size(283.92, $sm)
+        margin-left: auto
+        margin-right: auto
+        .splide__track
+            overflow: visible
+.step-list
+    margin-top: size(67)
+    +up-xxl
+        margin-top: size(68.25, $xxl)
+    +md
+        margin-top: size(68.25, $lg)
+    +sm
+        margin-top: size(53, $sm)
+    .splide__slide
+        position: relative
+        width: size(273.5)
+        +up-xxl
+            width: size(326.54, $xxl)
+        +md
+            width: size(326.54, $lg)
+        +sm
+            width: auto
+    .splide__list
+        gap: size(34)
+        justify-content: center
+        +up-xxl
+            gap: size(40.5, $xxl)
+        +md
+            gap: size(20.5, $lg)
+        +sm
+            gap: 0
+            justify-content: flex-start
+.step-item__img
+    img
+        width: 100%
+.step-item__info
+    position: absolute
+    left: 0
+    right: 0
+    z-index: 2
+    text-align: center
+    top: size(142.5)
+    +up-xxl
+        top: size(170.44, $xxl)
+    +md
+        top: size(170.44, $lg)
+    +sm
+        top: size(148.2, $sm)
+.step-item__info-title
+    font-style: italic
+    line-height: normal
+    font-weight: 700
+    font-size: size(22.5)
+    +up-xxl
+        font-size: size(26.25, $xxl)
+    +md
+        font-size: size(26.25, $lg)
+    +sm
+        font-size: size(25, $sm)
+.step-item__info-desc
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    line-height: normal
+    font-weight: 500
+    font-size: size(16.5)
+    max-width: size(221.25)
+    margin-top: size(5)
+    +up-xxl
+        font-size: size(18.75, $xxl)
+        max-width: size(264.64, $xxl)
+        margin-top: size(5, $xxl)
+    +md
+        font-size: size(18.75, $lg)
+        max-width: size(264.64, $lg)
+        margin-top: size(5, $lg)
+    +sm
+        font-size: size(19, $sm)
+        max-width: size(230, $sm)
+        margin-top: size(5, $sm)
+//TOP CONTENT
+
+
+
+//SECOND AREA
+.section-skin-photos
+    text-align: center
+    padding: size(143.25) 0 size(124.01)
+    +up-xxl
+        padding: size(275.25, $xxl) 0 size(195.03, $xxl)
+    +sm
+        padding: size(109, $sm) 0 size(118, $sm)
+.section-skin-photos-title
+    font-style: italic
+    line-height: normal
+    font-weight: 900
+    line-height: normal
+    color: #000
+    font-size: size(39.75)
+    +up-xxl
+        font-size: size(56.25, $xxl)
+    +sm
+        font-size: size(37, $sm)
+        max-width: 90%
+        margin-left: auto
+        margin-right: auto
+.skins-splide
+    margin-top: size(68.25)
+    +up-xxl
+        margin-top: size(58.75, $xxl)
+    +sm
+        margin-top: size(53, $sm)
+    .splide__slide
+        flex: none
+        width: size(644.18)
+        +up-xxl
+            width: size(768.14, $xxl)
+        +sm
+            width: size(266.68, $sm)
+    img
+        width: 100%
+//SECOND AREA
+
+
+//BLACK AREA
+.section-two-col
+    position: relative
+    overflow: hidden
+    border-radius: size(22.5)
+    +up-xxl
+        border-radius: size(22.5, $xxl)
+    +sm
+        border-radius: size(30, $sm)
+.section-two-col-bg
+    height: size(1011.75)
+    +up-xxl
+        height: size(1144.5, $xxl)
+    +sm
+        height: size(1133, $sm)
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+.section-two-col-cont
+    position: absolute
+    left: 0
+    right: 0
+    z-index: 2
+    display: flex
+    align-items: center
+    gap: size(89.25)
+    top: size(236.25)
+    padding: 0 size(76.5)
+    +up-xxl
+        gap: size(115, $xxl)
+        top: size(242.03, $xxl)
+        padding: 0 size(132, $xxl)
+    +sm
+        gap: size(48, $sm)
+        top: size(86, $sm)
+        padding: 0 size(19, $sm)
+        flex-direction: column
+.section-two-col-cont-col
+    flex: 1 1 0%
+    img
+        width: 100%
+        display: block
+
+.section-two-col__title-green
+    font-style: italic
+    line-height: normal
+    font-weight: 700
+    line-height: normal
+    color: $green
+    text-align: center
+    font-size: size(36)
+    margin-bottom: size(38.25)
+    +up-xxl
+        font-size: size(45.75, $xxl)
+        margin-bottom: size(51.12, $xxl)
+    +sm
+        font-size: size(32, $sm)
+        margin-bottom: size(29, $sm)
+.section-two-col__title-red
+    font-style: italic
+    line-height: normal
+    font-weight: 700
+    line-height: normal
+    color: $red
+    text-align: center
+    font-size: size(36)
+    margin-top: size(49.5)
+    +up-xxl
+        font-size: size(45.75, $xxl)
+        margin-top: size(63.66, $xxl)
+    +sm
+        font-size: size(32, $sm)
+        margin-top: size(29, $sm)
+        br
+            display: none
+//BLACK AREA
+
+
+//BOTTOM SECTION
+.bottom-section
+    padding: size(136.5) 0 size(105)
+    color: #000
+    +up-xxl
+        padding: size(129.91, $xxl) 0 size(126, $xxl)
+    +sm
+        padding: size(102, $sm) 0 size(64, $sm)
+.bottom-section-content
+    margin-left: auto
+    margin-right: auto
+    width: size(1219.74)
+    +up-xxl
+        width: size(1605.75, $xxl)
+    +sm
+        width: size(355, $sm)
+
+
+.grid-reviews
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: size(45)
+    +up-xxl
+        gap: size(59, $xxl)
+    +md
+        gap: size(45, $md)
+        grid-template-columns: repeat(1, minmax(0, 1fr))
+    +sm
+        gap: size(52, $sm)
+        margin-left: 0
+        margin-right: 0
+.reviews__item
+    display: flex
+    flex-direction: column
+    height: 100%
+.grid-reviews__item
+    border-top: 1px solid #A17B3B
+    border-bottom: 1px solid #A17B3B
+    padding: size(28) 0
+    +up-xxl
+        padding: size(36.53, $xxl) 0
+    +md
+        padding: size(25, $md) 0
+    +sm
+        padding: size(25, $sm) 0
+
+.reviews__item__head
+    display: flex
+.reviews__item__head-col
+    flex: 1 1 0%
+.rait-list
+    display: flex
+    gap: size(6.31)
+    +up-xxl
+        gap: size(8.29, $xxl)
+    +sm
+        gap: size(5.95, $sm)
+    &>li
+        flex: none
+    .rait-star
+        width: size(24)
+        height: size(24)
+        background-image: url('../images/star.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 100% 100%
+        +up-xxl
+            width: size(31, $xxl)
+            height: size(31, $xxl)
+        +md
+            width: size(24, $md)
+            height: size(24, $md)
+        +sm
+            width: size(24, $sm)
+            height: size(24, $sm)
+.reviews__item-date
+    text-align: right
+    color: #000
+    line-height: 133%
+    font-size: size(11.25)
+    +up-xxl
+        font-size: size(15, $xxl)
+    +md
+        font-size: size(11.25, $md)
+    +sm
+        font-size: size(12, $sm)
+
+.reviews__item__body
+    margin-top: size(14.4)
+    +up-xxl
+        margin-top: size(18.58, $xxl)
+    +md
+        margin-top: size(14.4, $md)
+    +sm
+        margin-top: size(14.4, $sm)
+
+    .reviews__item-title
+        font-weight: 600
+        line-height: 133%
+        font-size: size(18)
+        +up-xxl
+            font-size: size(25.5, $xxl)
+        +md
+            font-size: size(18, $md)
+        +sm
+            font-size: size(22, $sm)
+    .reviews__item-text
+        line-height: 133%
+        font-weight: 500
+        font-size: size(11.25)
+        margin-top: size(9.33)
+        margin-bottom: size(9.33)
+        +up-xxl
+            font-size: size(15, $xxl)
+            margin-top: size(12.26, $xxl)
+            margin-bottom: size(12.26, $xxl)
+        +md
+            font-size: size(11.25, $md)
+            margin-top: size(9.33, $md)
+            margin-bottom: size(9.33, $md)
+        +sm
+            font-size: size(12, $sm)
+            margin-top: size(9.33, $sm)
+            margin-bottom: size(9.33, $sm)
+.reviews__item__footer
+    color: #000
+    line-height: 133%
+    font-size: size(11.25)
+    margin-top: auto
+    +up-xxl
+        font-size: size(15, $xxl)
+    +md
+        font-size: size(11.25, $md)
+    +sm
+        font-size: size(12, $sm)
+
+
+.last-bq
+    position: relative
+    margin-top: size(74.26)
+    +up-xxl
+        margin-top: size(81.91, $xxl)
+    +sm
+        margin-top: size(64.32, $sm)
+.last-bq__img
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    overflow: hidden
+    border-radius: size(22.5)
+    
+    +up-xxl
+        border-radius: size(22.5, $xxl)
+    +sm
+        border-radius: size(30, $sm)
+    img
+        width: 100%
+        height: 100%
+        display: block
+        object-fit: cover
+.last-bq__cont
+    text-align: center
+    position: relative
+    z-index: 2
+    color: #fff
+    font-style: italic
+    line-height: normal
+    font-weight: 700
+    line-height: normal
+    text-align: center
+    font-size: size(36)
+    padding: size(75.5) size(43.5)
+    +up-xxl
+        font-size: size(36, $xxl)
+        padding: size(76.5, $xxl) size(106, $xxl)
+    +sm
+        font-size: size(32, $sm)
+        padding: size(34, $sm) size(16, $sm)
+//BOTTOM SECTION

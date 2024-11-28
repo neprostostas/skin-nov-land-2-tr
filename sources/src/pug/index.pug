@@ -1,0 +1,192 @@
+extends base/_layout
+block head
+    title Skin.Club Reviews
+block page
+    .top-content
+        section.top-content__hero
+            h1.top-content__hero-title WE PROVIDE  COOL SKINS FOR  THE COUNTER-STRIKE GAME
+            p.top-content__hero-desc In Counter-Strike, skins are cosmetic items  that change the appearance of weapons,  knives, or gloves — WE PROVIDE THEM!
+
+            .top-content__hero__image
+                picture
+                    source(media="(max-width: 767px)" srcset="images/p1-alt-mobile.webp" type="image/webp")
+                    source(media="(min-width: 768px)" srcset="images/p1-alt.webp" type="image/webp")
+                    img(src="images/p1-alt.webp" alt="WE PROVIDE  COOL SKINS FOR  THE COUNTER-STRIKE GAME" width="1032" height="649") 
+
+
+            a(href="#" class="main-btn") 
+                span.main-btn__text Register for free
+        section.top-content__bottom
+            h2.top-content__bottom__title How does it work on our website?
+            p.top-content__bottom__desc Our skins are offered through Cases. By selecting and opening a case, you can unlock a new skin to use in the Counter-Strike game.
+            .splide.step-slider.step-list
+                .splide__track
+                    .splide__list
+                        .splide__slide
+                            figure.step-item
+                                .step-item__img
+                                    picture
+                                        source(media="(max-width: 767px)" srcset="images/step-1.webp" type="image/webp")
+                                        source(media="(min-width: 768px)" srcset="images/step-1.webp" type="image/webp")
+                                        img(src="images/step-1.webp" alt="Step 1" width="273" height="254") 
+                                figcaption.step-item__info
+                                    h3.step-item__info-title Step 1
+                                    p.step-item__info-desc Sign up for free using your Steam account
+                        .splide__slide
+                            figure.step-item
+                                .step-item__img
+                                    picture
+                                        source(media="(max-width: 767px)" srcset="images/step-2.webp" type="image/webp")
+                                        source(media="(min-width: 768px)" srcset="images/step-2.webp" type="image/webp")
+                                        img(src="images/step-2.webp" alt="Step 2" width="273" height="254") 
+                                figcaption.step-item__info
+                                    h3.step-item__info-title Step 2
+                                    p.step-item__info-desc Select a case from the wide variety available
+                        .splide__slide
+                            figure.step-item
+                                .step-item__img
+                                    picture
+                                        source(media="(max-width: 767px)" srcset="images/step-3.webp" type="image/webp")
+                                        source(media="(min-width: 768px)" srcset="images/step-3.webp" type="image/webp")
+                                        img(src="images/step-3.webp" alt="Step 3" width="273" height="254") 
+                                figcaption.step-item__info
+                                    h3.step-item__info-title Step 3
+                                    p.step-item__info-desc Open the case to reveal #[br] a new item.
+                        .splide__slide
+                            figure.step-item
+                                .step-item__img
+                                    picture
+                                        source(media="(max-width: 767px)" srcset="images/step-4.webp" type="image/webp")
+                                        source(media="(min-width: 768px)" srcset="images/step-4.webp" type="image/webp")
+                                        img(src="images/step-4.webp" alt="Step 4" width="273" height="254") 
+                                figcaption.step-item__info
+                                    h3.step-item__info-title Step 4
+                                    p.step-item__info-desc Add it to your game #[br] and enjoy.
+
+                .splide__arrows
+                    button(type="button" class="splide__arrow splide__arrow--prev") Prev
+                    button(type="button" class="splide__arrow splide__arrow--next") Next
+
+    section.section-skin-photos
+        h2.section-skin-photos-title Here’s how your skin could appear in Counter-Strike.
+
+        .skins-splide.splide
+            .splide__track
+                .splide__list
+                    .splide__slide
+                        picture
+                            source(media="(max-width: 767px)" srcset="images/slide-1-mobile.webp" type="image/webp")
+                            source(media="(min-width: 768px)" srcset="images/slide-1.webp" type="image/webp")
+                            img(src="images/slide-1.webp" alt="decor" width="644" height="379") 
+                    .splide__slide
+                        picture
+                            source(media="(max-width: 767px)" srcset="images/slide-2-mobile.webp" type="image/webp")
+                            source(media="(min-width: 768px)" srcset="images/slide-2.webp" type="image/webp")
+                            img(src="images/slide-2.webp" alt="decor" width="644" height="379") 
+                    .splide__slide
+                        picture
+                            source(media="(max-width: 767px)" srcset="images/slide-3-mobile.webp" type="image/webp")
+                            source(media="(min-width: 768px)" srcset="images/slide-3.webp" type="image/webp")
+                            img(src="images/slide-3.webp" alt="decor" width="644" height="379") 
+    
+
+    section.section-two-col
+        .section-two-col-bg 
+            picture
+                source(media="(max-width: 767px)" srcset="images/black-bg-mobile.webp" type="image/webp")
+                source(media="(min-width: 768px)" srcset="images/black-bg.webp" type="image/webp")
+                img(src="images/black-bg.webp" alt="decor" width="1454" height="1011")
+        .section-two-col-cont
+            .section-two-col-cont-col
+                h2.section-two-col__title-green Did you know that #[br] Counter-Strike skins #[br] can sell for insanely high prices?
+                picture
+                    source(media="(max-width: 767px)" srcset="images/green-section-mobile.webp" type="image/webp")
+                    source(media="(min-width: 768px)" srcset="images/green-section.webp" type="image/webp")
+                    img(src="images/green-section.webp" alt="decor" width="599" height="336")
+            .section-two-col-cont-col
+                picture
+                    source(media="(max-width: 767px)" srcset="images/red-section-mobile.webp" type="image/webp")
+                    source(media="(min-width: 768px)" srcset="images/red-section.webp" type="image/webp")
+                    img(src="images/red-section.webp" alt="decor" width="599" height="336")
+                h2.section-two-col__title-red We have a wide selection #[br] available—take your time to #[br] browse and find your favorites!
+    
+
+    .bottom-section
+        .bottom-section-content
+            ul.grid-reviews
+                li.grid-reviews__item
+                    blockquote.reviews__item
+                        header.reviews__item__head
+                            .reviews__item__head-col
+                                ul.rait-list
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                            .reviews__item__head-col
+                                .reviews__item-date 1 day ago
+                        .reviews__item__body
+                            h3.reviews__item-title I Love This Site!
+                            p.reviews__item-text I play on skin club a lot and I also make videos on YouTube on skin club as well “I am not sponsored” I highly recommend this site if you want to gain skins while being entertained it is way more fun then spending $2.50 on a key to open 1 case on cs2. I’ve won a lot on this site and I’ve lost a lot it’s all up to luck so put money in if you want to be entertained with a chance to hit a good skin. Don't expect to get rich easily in anything in life.
+                        footer.reviews__item__footer
+                            p Date of experience: September 28, 2024
+                li.grid-reviews__item
+                    blockquote.reviews__item
+                        header.reviews__item__head
+                            .reviews__item__head-col
+                                ul.rait-list
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                            .reviews__item__head-col
+                                .reviews__item-date 1 day ago
+                        .reviews__item__body
+                            h3.reviews__item-title best one out there, imo
+                            p.reviews__item-text Of all the gambling sites this one is by far the most legit and fair. I have hit on multiple super low odds skins and have also lost to others hitting them. best battle system. great exchange system. overall amazing experience....especially when i win :]
+                        footer.reviews__item__footer
+                            p Date of experience: September 16, 2023
+                li.grid-reviews__item
+                    blockquote.reviews__item
+                        header.reviews__item__head
+                            .reviews__item__head-col
+                                ul.rait-list
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                                    li
+                                        .rait-star
+                            .reviews__item__head-col
+                                .reviews__item-date 1 day ago
+                        .reviews__item__body
+                            h3.reviews__item-title I Love This Site!
+                            p.reviews__item-text I play on skin club a lot and I also make videos on YouTube on skin club as well “I am not sponsored” I highly recommend this site if you want to gain skins while being entertained it is way more fun then spending $2.50 on a key to open 1 case on cs2. I’ve won a lot on this site and I’ve lost a lot it’s all up to luck so put money in if you want to be entertained with a chance to hit a good skin. Don't expect to get rich easily in anything in life.
+                        footer.reviews__item__footer
+                            p Date of experience: September 28, 2024
+
+
+            blockquote.last-bq
+                .last-bq__img
+                    picture
+                        source(media="(max-width: 767px)" srcset="images/bq-cover-mobile.webp" type="image/webp")
+                        source(media="(min-width: 768px)" srcset="images/bq-cover.webp" type="image/webp")
+                        img(src="images/bq-cover.webp" alt="decor" width="1219" height="240")
+                .last-bq__cont
+                    p We’re here to help with any questions through 24/7 chat support on the website. Simply click the button in the lower right corner
